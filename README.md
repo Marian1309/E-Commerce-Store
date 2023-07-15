@@ -1,4 +1,4 @@
-# [Project Name]()
+# [E-Commerce Store]()
 
 Description
 
@@ -11,8 +11,6 @@ Description
 
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org)
-- [Clerk Auth](https://clerk.com)
-- [Prisma ORM](https://www.prisma.io)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Shadcn UI](https://ui.shadcn.com)
 
@@ -33,7 +31,7 @@ npm i pnpm -g
 ### 2. Clone the repository
 
 ```bash
-git clone https://github.com/Marian1309/E-Commerce-Dashboard
+git clone https://github.com/Marian1309/E-Commerce-Store
 ```
 
 ### 3. Install dependencies
@@ -50,10 +48,4 @@ Create a `.env` file in the root directory and add the environment variables as 
 
 ```bash
 pnpm run dev
-```
-
-### 6. Push database
-
-```bash
-pnpm run db:push
 ```
