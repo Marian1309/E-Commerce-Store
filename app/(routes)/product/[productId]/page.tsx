@@ -5,13 +5,13 @@ import { getProduct, getProducts } from '@/actions';
 import { Gallery } from '@/common/gallery';
 import { Container, Info, ProductList } from '@/common/ui';
 
-interface PageProps {
+interface ProductPageProps {
   params: {
     productId: string;
   };
 }
 
-const Page: NextPage<PageProps> = async ({ params }) => {
+const ProductPage: NextPage<ProductPageProps> = async ({ params }) => {
   const product = await getProduct(params.productId);
   const suggestedProducts = await getProducts({
     categoryId: product.category.id
@@ -38,4 +38,4 @@ const Page: NextPage<PageProps> = async ({ params }) => {
   );
 };
 
-export default Page;
+export default ProductPage;

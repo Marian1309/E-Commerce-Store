@@ -7,3 +7,4 @@ export { default as NoResults } from './no-results';
 export { default as ProductItem } from './product-item';
 export { default as Currency } from './currency';
 export { default as Info } from './info';
+export { default as IconButton } from './icon-button';
