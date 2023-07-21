@@ -3,7 +3,11 @@ import type { FC, ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Figtree } from 'next/font/google';
 
+import { Toaster } from 'react-hot-toast';
+
 import { ICONS } from '@/lib/constants';
+import { ModalProvider } from '@/lib/providers';
+import { toastOptions } from '@/lib/toast';
 
 import { Footer, Navbar } from '@/common/layout';
 
@@ -21,7 +25,9 @@ export const metadata: Metadata = {
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <html lang="en">
+      <Toaster toastOptions={toastOptions} />
       <body className={figtree.className}>
+        <ModalProvider />
         <Navbar />
         {children}
         <Footer />

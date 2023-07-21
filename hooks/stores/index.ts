@@ -1,1 +1,1 @@
-export { default as useCounterStore } from './use-counter';
+export { default as usePreviewModalStore } from './use-preview-modal';

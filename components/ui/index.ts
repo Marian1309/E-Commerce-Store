@@ -8,3 +8,4 @@ export { default as ProductItem } from './product-item';
 export { default as Currency } from './currency';
 export { default as Info } from './info';
 export { default as IconButton } from './icon-button';
+export { default as Modal } from './modal';
