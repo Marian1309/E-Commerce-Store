@@ -3,6 +3,7 @@
 import type { FC } from 'react';
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 import { Expand, ShoppingCart } from 'lucide-react';
 
@@ -16,8 +17,17 @@ interface ProductItemProps {
 }
 
 const ProductItem: FC<ProductItemProps> = ({ data }) => {
+  const router = useRouter();
+
+  const handleOnClickPushToProductId = () => {
+    router.push(`/product/${data.id}`);
+  };
+
   return (
-    <div className="group cursor-pointer space-y-4 rounded-xl border bg-white p-3">
+    <div
+      className="group cursor-pointer space-y-4 rounded-xl border bg-white p-3"
+      onClick={handleOnClickPushToProductId}
+    >
       <div className="relative aspect-square rounded-xl bg-gray-100">
         <Image
           src={data.images[0].url}

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import { getCategories } from '@/actions';
 
-import { Container } from '@/common/ui/self';
+import { Container } from '@/common/ui';
 
 import MainNav from './main-nav';
 import NavbarActions from './navbar-actions';

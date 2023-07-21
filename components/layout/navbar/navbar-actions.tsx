@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 import { ShoppingBag } from 'lucide-react';
 
-import { Button } from '@/common/ui/self';
+import { Button } from '@/common/ui';
 
 const NavbarActions: FC = () => {
   const [isMounted, setIsMounted] = useState<boolean>(false);

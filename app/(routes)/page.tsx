@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 
 import { getBillboard, getProducts } from '@/actions';
 
-import { Billboard, Container, ProductList } from '@/common/ui/self';
+import { Billboard, Container, ProductList } from '@/common/ui';
 
 export const revalidate = 0;
 
