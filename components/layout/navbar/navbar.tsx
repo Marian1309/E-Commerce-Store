@@ -5,6 +5,7 @@ import { getCategories } from '@/actions';
 import { Container } from '@/common/ui/self';
 
 import MainNav from './main-nav';
+import NavbarActions from './navbar-actions';
 
 export const revalidate = 0;
 
@@ -20,6 +21,7 @@ const Navbar = async () => {
           </Link>
 
           <MainNav data={categories} />
+          <NavbarActions />
         </div>
       </Container>
     </div>
