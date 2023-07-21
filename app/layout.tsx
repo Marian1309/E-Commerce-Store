@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <html lang="en">
-      <Toaster toastOptions={toastOptions} />
       <body className={figtree.className}>
+        <Toaster toastOptions={toastOptions} />
         <ModalProvider />
         <Navbar />
         {children}

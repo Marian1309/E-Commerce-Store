@@ -9,7 +9,7 @@ import { Expand, ShoppingCart } from 'lucide-react';
 
 import type { Product } from '@/types';
 
-import { usePreviewModalStore } from '@/hooks/stores';
+import { useCartStore, usePreviewModalStore } from '@/hooks/stores';
 
 import Currency from './currency';
 import IconButton from './icon-button';
@@ -21,6 +21,7 @@ interface ProductItemProps {
 const ProductItem: FC<ProductItemProps> = ({ data }) => {
   const router = useRouter();
   const { onOpen } = usePreviewModalStore();
+  const { addItem } = useCartStore();
 
   const handleOnClickPushToProductId = () => {
     router.push(`/product/${data.id}`);
@@ -29,6 +30,11 @@ const ProductItem: FC<ProductItemProps> = ({ data }) => {
   const handlePreview: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.stopPropagation();
     onOpen(data);
+  };
+
+  const handleAddingItemToCart: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.stopPropagation();
+    addItem(data);
   };
 
   return (
@@ -51,7 +57,7 @@ const ProductItem: FC<ProductItemProps> = ({ data }) => {
               icon={<Expand size={20} className="text-gray-600" />}
             />
             <IconButton
-              onClick={() => {}}
+              onClick={handleAddingItemToCart}
               icon={<ShoppingCart size={20} className="text-gray-600" />}
             />
           </div>

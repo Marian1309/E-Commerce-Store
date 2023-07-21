@@ -3,12 +3,19 @@
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 
+import { useRouter } from 'next/navigation';
+
 import { ShoppingBag } from 'lucide-react';
+
+import { useCartStore } from '@/hooks/stores';
 
 import { Button } from '@/common/ui';
 
 const NavbarActions: FC = () => {
   const [isMounted, setIsMounted] = useState<boolean>(false);
+
+  const router = useRouter();
+  const { items } = useCartStore();
 
   useEffect(() => {
     setIsMounted(true);
@@ -20,9 +27,14 @@ const NavbarActions: FC = () => {
 
   return (
     <div className="ml-auto flex items-center gap-x-4">
-      <Button className="flex items-center rounded-full bg-black px-4 py-2">
+      <Button
+        className="flex items-center rounded-full bg-black px-4 py-2"
+        onClick={() => router.push('/cart')}
+      >
         <ShoppingBag size={20} color="white" />
-        <span className="ml-2 text-sm font-medium text-white">0</span>
+        <span className="ml-2 text-sm font-medium text-white">
+          {items.length}
+        </span>
       </Button>
     </div>
   );
