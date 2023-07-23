@@ -14,7 +14,6 @@ interface MainNavProps {
 }
 
 const MainNav: FC<MainNavProps> = ({ data }) => {
-  console.log(data);
   const pathname = usePathname();
 
   const routes = data.map((route) => ({
