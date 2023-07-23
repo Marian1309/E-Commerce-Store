@@ -44,14 +44,18 @@ const Summary = () => {
       <h2 className="text-lg font-medium text-gray-900">Order Summary</h2>
 
       <div className="mt-6 space-y-4">
-        <div className="border-t border-gray-200 pl-4 flex-between">
-          <div className="text-base font-medium text-gray-900">Order total</div>
+        <div className="border-t border-gray-200 pt-4 flex-between">
+          <p className="text-base font-medium text-gray-900">Order total</p>
 
           <Currency value={String(totalPrice)} />
         </div>
       </div>
 
-      <Button className="mt-5 w-full" onClick={handleOnCheckout}>
+      <Button
+        className="mt-5 w-full"
+        disabled={items.length === 0}
+        onClick={handleOnCheckout}
+      >
         Checkout
       </Button>
     </div>

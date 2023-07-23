@@ -1,3 +1,3 @@
 export const ICONS = {
-  favicon: '/icons/favicon.ico'
+  favicon: '/icons/favicon.png'
 };

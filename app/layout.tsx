@@ -28,6 +28,7 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
       <body className={figtree.className}>
         <Toaster toastOptions={toastOptions} />
         <ModalProvider />
+
         <Navbar />
         {children}
         <Footer />

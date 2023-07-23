@@ -1,11 +1,17 @@
 import axios from 'axios';
 
-import type { Billboard } from '@/types';
+const getBillboard = async () => {
+  const { data: storeId } = await axios.get(
+    `${process.env.NEXT_PUBLIC_API_URL}/storeId`
+  );
 
-const URL = `${process.env.NEXT_PUBLIC_API_URL}/billboards`;
+  const { data: billboardId } = await axios.get(
+    `${process.env.NEXT_PUBLIC_API_URL}/billboardId`
+  );
 
-const getBillboard = async (id: string): Promise<Billboard> => {
-  const { data } = await axios.get(`${URL}/${id}`);
+  const URL = `${process.env.NEXT_PUBLIC_API_URL}/${storeId}/billboards`;
+
+  const { data } = await axios.get(`${URL}/${billboardId}`);
 
   return data;
 };

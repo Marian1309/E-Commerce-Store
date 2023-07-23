@@ -3,8 +3,6 @@ import queryString from 'query-string';
 
 import type { Product } from '@/types';
 
-const URL = `${process.env.NEXT_PUBLIC_API_URL}/products`;
-
 interface Query {
   categoryId?: string;
   colorId?: string;
@@ -13,6 +11,11 @@ interface Query {
 }
 
 const getProducts = async (query: Query): Promise<Product[]> => {
+  const { data: storeId } = await axios.get(
+    `${process.env.NEXT_PUBLIC_API_URL}/storeId`
+  );
+
+  const URL = `${process.env.NEXT_PUBLIC_API_URL}/${storeId}/products`;
   const { categoryId, colorId, sizeId, isFeatured } = query;
 
   const url = queryString.stringifyUrl({
