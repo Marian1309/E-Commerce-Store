@@ -20,7 +20,11 @@ const Currency: FC<CurrencyProps> = ({ value }) => {
     return null;
   }
 
-  return <div className="font-semibold">{formatPrice(+value)}</div>;
+  return (
+    <div className="font-semibold">
+      <p>{formatPrice(+value)}</p>
+    </div>
+  );
 };
 
 export default Currency;
