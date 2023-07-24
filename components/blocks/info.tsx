@@ -8,8 +8,7 @@ import type { Product } from '@/types';
 
 import { useCartStore } from '@/hooks/stores';
 
-import Button from './button';
-import Currency from './currency';
+import { Button, Currency } from '../ui';
 
 interface InfoProps {
   data: Product;

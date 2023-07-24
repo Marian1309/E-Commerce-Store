@@ -2,10 +2,10 @@ import axios from 'axios';
 
 import type { Category } from '@/types';
 
+import getStoreId from './get-store-id';
+
 const getCategories = async (): Promise<Category[]> => {
-  const { data: storeId } = await axios.get(
-    `${process.env.NEXT_PUBLIC_API_URL}/storeId`
-  );
+  const storeId = await getStoreId();
 
   const URL = `${process.env.NEXT_PUBLIC_API_URL}/${storeId}/categories`;
 

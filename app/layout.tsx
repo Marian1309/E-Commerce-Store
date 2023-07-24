@@ -9,7 +9,7 @@ import { ICONS } from '@/lib/constants';
 import { ModalProvider } from '@/lib/providers';
 import { toastOptions } from '@/lib/toast';
 
-import { Footer, Navbar } from '@/common/layout';
+import { Footer, Navbar } from '@/components/layout';
 
 import './globals.scss';
 
@@ -27,6 +27,7 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
     <html lang="en">
       <body className={figtree.className}>
         <Toaster toastOptions={toastOptions} />
+
         <ModalProvider />
 
         <Navbar />

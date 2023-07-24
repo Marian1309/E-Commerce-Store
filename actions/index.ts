@@ -1,3 +1,4 @@
+export { default as getStoreId } from './get-store-id';
 export { default as getCategories } from './get-categories';
 export { default as getBillboard } from './get-billboard';
 export { default as getProducts } from './get-products';

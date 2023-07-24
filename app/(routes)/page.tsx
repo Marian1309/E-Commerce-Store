@@ -2,7 +2,8 @@ import type { NextPage } from 'next';
 
 import { getBillboard, getProducts } from '@/actions';
 
-import { Billboard, Container, ProductList } from '@/common/ui';
+import { ProductList } from '@/components/blocks';
+import { Billboard, Container } from '@/components/ui';
 
 export const revalidate = 0;
 

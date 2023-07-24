@@ -7,9 +7,11 @@ import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 
+import { getStoreId } from '@/actions';
+
 import { useCartStore } from '@/hooks/stores';
 
-import { Button, Currency } from '@/common/ui';
+import { Button, Currency } from '@/components/ui';
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -31,9 +33,7 @@ const Summary = () => {
   }, 0);
 
   const handleOnCheckout = async () => {
-    const { data: storeId } = await axios.get(
-      `${process.env.NEXT_PUBLIC_API_URL}/storeId`
-    );
+    const storeId = await getStoreId();
 
     const { data } = await axios.post(
       `${process.env.NEXT_PUBLIC_API_URL}/${storeId}/checkout`,

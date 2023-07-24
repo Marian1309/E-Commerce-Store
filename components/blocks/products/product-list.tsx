@@ -2,7 +2,8 @@ import type { FC } from 'react';
 
 import type { Product } from '@/types';
 
-import NoResults from './no-results';
+import { NoResults } from '@/components/ui';
+
 import ProductItem from './product-item';
 
 interface ProductListProps {

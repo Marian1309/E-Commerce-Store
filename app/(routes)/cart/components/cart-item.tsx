@@ -10,7 +10,7 @@ import type { Product } from '@/types';
 
 import { useCartStore } from '@/hooks/stores';
 
-import { Currency, IconButton } from '@/common/ui';
+import { Currency, IconButton } from '@/components/ui';
 
 interface CartItemProps {
   data: Product;

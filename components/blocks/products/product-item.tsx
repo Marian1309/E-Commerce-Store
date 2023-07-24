@@ -11,8 +11,7 @@ import type { Product } from '@/types';
 
 import { useCartStore, usePreviewModalStore } from '@/hooks/stores';
 
-import Currency from './currency';
-import IconButton from './icon-button';
+import { Currency, IconButton } from '@/components/ui';
 
 interface ProductItemProps {
   data: Product;

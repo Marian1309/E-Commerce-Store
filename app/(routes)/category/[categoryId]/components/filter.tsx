@@ -10,7 +10,7 @@ import type { Color, Size } from '@/types';
 
 import { cn } from '@/lib/utils';
 
-import { Button } from '@/common/ui';
+import { Button } from '@/components/ui';
 
 interface FilterProps {
   data: (Size | Color)[];

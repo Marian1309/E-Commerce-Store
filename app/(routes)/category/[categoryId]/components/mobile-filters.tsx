@@ -8,7 +8,7 @@ import { Plus, X } from 'lucide-react';
 
 import type { Color, Size } from '@/types';
 
-import { Button, IconButton } from '@/common/ui';
+import { Button, IconButton } from '@/components/ui';
 
 import Filter from './filter';
 

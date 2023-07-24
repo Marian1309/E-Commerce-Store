@@ -2,8 +2,10 @@ import axios from 'axios';
 
 import type { Product } from '@/types';
 
+import getStoreId from './get-store-id';
+
 const getProduct = async (id: string): Promise<Product> => {
-  const storeId = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/storeId`);
+  const storeId = await getStoreId();
 
   const URL = `${process.env.NEXT_PUBLIC_API_URL}/${storeId}/products`;
 

@@ -2,8 +2,8 @@ import type { NextPage } from 'next';
 
 import { getProduct, getProducts } from '@/actions';
 
-import { Gallery } from '@/common/gallery';
-import { Container, Info, ProductList } from '@/common/ui';
+import { Gallery, Info, ProductList } from '@/components/blocks';
+import { Container } from '@/components/ui';
 
 export const revalidate = 0;
 
@@ -15,8 +15,10 @@ interface ProductPageProps {
 
 const ProductPage: NextPage<ProductPageProps> = async ({ params }) => {
   const product = await getProduct(params.productId);
+  const categoryId = product?.category?.id;
+
   const suggestedProducts = await getProducts({
-    categoryId: product?.category?.id
+    categoryId
   });
 
   return (

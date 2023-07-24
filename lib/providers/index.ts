@@ -1,1 +1,1 @@
-export { default as ModalProvider } from './_modal-provider';
+export { default as ModalProvider } from './modal';

@@ -2,7 +2,8 @@ import type { NextPage } from 'next';
 
 import { getCategory, getColors, getProducts, getSizes } from '@/actions';
 
-import { Billboard, Container, NoResults, ProductItem } from '@/common/ui';
+import { ProductItem } from '@/components/blocks';
+import { Billboard, Container, NoResults } from '@/components/ui';
 
 import { Filter, MobileFilters } from './components';
 

@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { GlobalLoader } from '@/common/ui';
+import { GlobalLoader } from '@/components/ui';
 
 const Loading: FC = () => {
   return <GlobalLoader />;

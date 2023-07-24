@@ -6,7 +6,7 @@ import type { NextPage } from 'next';
 
 import { useCartStore } from '@/hooks/stores';
 
-import { Container } from '@/common/ui';
+import { Container } from '@/components/ui';
 
 import { CartItem, Summary } from './components';
 

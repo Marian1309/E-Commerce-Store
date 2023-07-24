@@ -1,10 +1,11 @@
 'use client';
 
+import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 
-import { PreviewModal } from '@/common/modals';
+import PreviewModal from '@/components/modals/preview-modal';
 
-const ModalProvider = () => {
+const ModalProvider: FC = () => {
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
   useEffect(() => {
@@ -15,11 +16,7 @@ const ModalProvider = () => {
     return null;
   }
 
-  return (
-    <>
-      <PreviewModal />
-    </>
-  );
+  return <PreviewModal />;
 };
 
 export default ModalProvider;

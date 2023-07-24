@@ -9,7 +9,7 @@ import { ShoppingBag } from 'lucide-react';
 
 import { useCartStore } from '@/hooks/stores';
 
-import { Button } from '@/common/ui';
+import { Button } from '@/components/ui';
 
 const NavbarActions: FC = () => {
   const [isMounted, setIsMounted] = useState<boolean>(false);

@@ -6,7 +6,7 @@ import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { X } from 'lucide-react';
 
-import IconButton from './icon-button';
+import IconButton from '../ui/icon-button';
 
 interface ModalProps {
   isOpen: boolean;

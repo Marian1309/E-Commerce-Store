@@ -2,8 +2,7 @@
 
 import { usePreviewModalStore } from '@/hooks/stores';
 
-import { Gallery } from '@/common/gallery';
-import { Info, Modal } from '@/common/ui';
+import { Gallery, Info, Modal } from '../blocks';
 
 const PreviewModal = () => {
   const { isOpen, onClose } = usePreviewModalStore();
