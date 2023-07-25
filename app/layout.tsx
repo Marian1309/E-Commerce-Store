@@ -17,7 +17,7 @@ const figtree = Figtree({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'E-Commerce Store',
-  description: 'E-Commerce Client',
+  description: 'E-Commerce Store',
   icons: { icon: ICONS.favicon },
   authors: [{ name: 'Marian Pidchashyi', url: 'https://github.com/Marian1309' }]
 };

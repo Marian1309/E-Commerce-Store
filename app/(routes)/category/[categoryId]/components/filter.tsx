@@ -49,7 +49,7 @@ const Filter: FC<FilterProps> = ({ data, name, valueKey }) => {
 
   return (
     <div className="mb-8">
-      <h3 className="text-lg font-semibold">{name}</h3>
+      <h3 className="text-lg font-semibold dark:text-black">{name}</h3>
 
       <hr className="my-4" />
 

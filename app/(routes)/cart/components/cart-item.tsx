@@ -34,7 +34,10 @@ const CartItem: FC<CartItemProps> = ({ data }) => {
 
       <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6">
         <div className="absolute right-0 top-0 z-10">
-          <IconButton onClick={handleRemoveItem} icon={<X size={15} />} />
+          <IconButton
+            onClick={handleRemoveItem}
+            icon={<X size={15} className="dark:text-black" />}
+          />
         </div>
 
         <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0">
