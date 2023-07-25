@@ -11,7 +11,7 @@ import { getStoreId } from '@/actions';
 
 import { useCartStore } from '@/hooks/stores';
 
-import { Button, Currency } from '@/components/ui';
+import { Currency, CustomButton } from '@/components/ui';
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -44,24 +44,28 @@ const Summary = () => {
   };
 
   return (
-    <div className="mt-16 rounded-lg bg-gray-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-8 lg:p-8">
-      <h2 className="text-lg font-medium text-gray-900">Order Summary</h2>
+    <div className="mt-16 rounded-lg bg-gray-50 px-4 py-6 dark:bg-transparent sm:p-6 lg:col-span-5 lg:mt-8 lg:p-8">
+      <h2 className="text-lg font-medium text-gray-900 dark:text-white">
+        Order Summary
+      </h2>
 
       <div className="mt-6 space-y-4">
         <div className="border-t border-gray-200 pt-4 flex-between">
-          <p className="text-base font-medium text-gray-900">Order total</p>
+          <p className="text-base font-medium text-gray-900 dark:text-white">
+            Order total
+          </p>
 
           <Currency value={String(totalPrice)} />
         </div>
       </div>
 
-      <Button
+      <CustomButton
         className="mt-5 w-full"
         disabled={items.length === 0}
         onClick={handleOnCheckout}
       >
         Checkout
-      </Button>
+      </CustomButton>
     </div>
   );
 };

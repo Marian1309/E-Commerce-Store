@@ -10,7 +10,7 @@ import type { Color, Size } from '@/types';
 
 import { cn } from '@/lib/utils';
 
-import { Button } from '@/components/ui';
+import { CustomButton } from '@/components/ui';
 
 interface FilterProps {
   data: (Size | Color)[];
@@ -56,7 +56,7 @@ const Filter: FC<FilterProps> = ({ data, name, valueKey }) => {
       <div className="flex flex-wrap gap-2">
         {data.map((filter) => (
           <div className="flex items-center" key={filter.id}>
-            <Button
+            <CustomButton
               className={cn(
                 'rounded-md border border-gray-300 bg-white text-sm text-gray-800',
                 selectedValue === filter.id && 'bg-black text-white'
@@ -64,7 +64,7 @@ const Filter: FC<FilterProps> = ({ data, name, valueKey }) => {
               onClick={() => handleOnClick(filter.id)}
             >
               {filter.name}
-            </Button>
+            </CustomButton>
           </div>
         ))}
       </div>

@@ -38,7 +38,7 @@ const ProductItem: FC<ProductItemProps> = ({ data }) => {
 
   return (
     <div
-      className="group cursor-pointer space-y-4 rounded-xl border bg-white p-3"
+      className="group cursor-pointer space-y-4 rounded-xl border bg-white p-3 dark:bg-transparent"
       onClick={handleOnClickPushToProductId}
     >
       <div className="relative aspect-square rounded-xl bg-gray-100">

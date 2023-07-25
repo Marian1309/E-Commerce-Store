@@ -8,7 +8,7 @@ import { Plus, X } from 'lucide-react';
 
 import type { Color, Size } from '@/types';
 
-import { Button, IconButton } from '@/components/ui';
+import { CustomButton, IconButton } from '@/components/ui';
 
 import Filter from './filter';
 
@@ -25,12 +25,12 @@ const MobileFilters: FC<MobileFiltersProps> = ({ sizes, colors }) => {
 
   return (
     <>
-      <Button
+      <CustomButton
         onClick={handleOnOpen}
         className="flex items-center gap-x-2 lg:hidden"
       >
         Filters <Plus size={20} />
-      </Button>
+      </CustomButton>
 
       <Dialog
         open={isOpen}

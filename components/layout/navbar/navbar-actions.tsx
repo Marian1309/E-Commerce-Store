@@ -9,7 +9,7 @@ import { ShoppingBag } from 'lucide-react';
 
 import { useCartStore } from '@/hooks/stores';
 
-import { Button } from '@/components/ui';
+import { CustomButton } from '@/components/ui';
 
 const NavbarActions: FC = () => {
   const [isMounted, setIsMounted] = useState<boolean>(false);
@@ -27,7 +27,7 @@ const NavbarActions: FC = () => {
 
   return (
     <div className="ml-auto flex items-center gap-x-4">
-      <Button
+      <CustomButton
         className="flex items-center rounded-full bg-black px-4 py-2"
         onClick={() => router.push('/cart')}
       >
@@ -35,7 +35,7 @@ const NavbarActions: FC = () => {
         <span className="ml-2 text-sm font-medium text-white">
           {items.length}
         </span>
-      </Button>
+      </CustomButton>
     </div>
   );
 };

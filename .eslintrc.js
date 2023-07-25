@@ -57,7 +57,8 @@ module.exports = {
     'no-use-before-define': 'off',
     indent: 'off',
     'jsx-a11y/heading-has-content': 'off',
-    'react/jsx-curly-newline': 'off'
+    'react/jsx-curly-newline': 'off',
+    'react/prop-types': 'off'
   },
   globals: {
     process: true,

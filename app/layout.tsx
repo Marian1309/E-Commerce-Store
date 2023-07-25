@@ -6,7 +6,7 @@ import { Figtree } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 
 import { ICONS } from '@/lib/constants';
-import { ModalProvider } from '@/lib/providers';
+import { ModalProvider, ThemeProvider } from '@/lib/providers';
 import { toastOptions } from '@/lib/toast';
 
 import { Footer, Navbar } from '@/components/layout';
@@ -28,11 +28,13 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => {
       <body className={figtree.className}>
         <Toaster toastOptions={toastOptions} />
 
-        <ModalProvider />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ModalProvider />
 
-        <Navbar />
-        {children}
-        <Footer />
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
