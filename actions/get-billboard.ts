@@ -13,7 +13,7 @@ const getBillboard = async () => {
 
   const { data } = await axios.get(`${URL}/${billboardId}`);
 
-  return data;
+  return data ?? {};
 };
 
 export default getBillboard;
