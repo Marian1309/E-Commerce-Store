@@ -5,3 +5,4 @@ export { default as Currency } from './currency';
 export { default as GlobalLoader } from './global-loader';
 export { default as IconButton } from './icon-button';
 export { default as NoResults } from './no-results';
+export { default as Skeleton } from './skeleton';

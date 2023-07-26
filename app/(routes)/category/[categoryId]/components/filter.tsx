@@ -49,7 +49,9 @@ const Filter: FC<FilterProps> = ({ data, name, valueKey }) => {
 
   return (
     <div className="mb-8">
-      <h3 className="text-lg font-semibold dark:text-black">{name}</h3>
+      <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+        {name}
+      </h3>
 
       <hr className="my-4" />
 
@@ -58,7 +60,7 @@ const Filter: FC<FilterProps> = ({ data, name, valueKey }) => {
           <div className="flex items-center" key={filter.id}>
             <CustomButton
               className={cn(
-                'rounded-md border border-gray-300 bg-white text-sm text-gray-800',
+                'rounded-md border border-gray-300 bg-white text-sm text-gray-800 dark:bg-gray-800 dark:text-white',
                 selectedValue === filter.id && 'bg-black text-white'
               )}
               onClick={() => handleOnClick(filter.id)}

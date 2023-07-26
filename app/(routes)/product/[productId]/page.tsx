@@ -5,7 +5,7 @@ import { getProduct, getProducts } from '@/actions';
 import { Gallery, Info, ProductList } from '@/components/blocks';
 import { Container } from '@/components/ui';
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 interface ProductPageProps {
   params: {

@@ -7,7 +7,7 @@ import { Billboard, Container, NoResults } from '@/components/ui';
 
 import { Filter, MobileFilters } from './components';
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 interface CategoryPageProps {
   params: {

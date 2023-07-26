@@ -5,7 +5,6 @@ import { Figtree } from 'next/font/google';
 
 import { Toaster } from 'react-hot-toast';
 
-import { ICONS } from '@/lib/constants';
 import { ModalProvider, ThemeProvider } from '@/lib/providers';
 import { toastOptions } from '@/lib/toast';
 
@@ -18,7 +17,6 @@ const figtree = Figtree({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'E-Commerce Store',
   description: 'E-Commerce Store',
-  icons: { icon: ICONS.favicon },
   authors: [{ name: 'Marian Pidchashyi', url: 'https://github.com/Marian1309' }]
 };
 

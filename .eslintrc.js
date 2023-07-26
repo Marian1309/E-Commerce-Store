@@ -17,10 +17,9 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-empty-interface': 'warn',
     '@typescript-eslint/consistent-type-imports': 'warn',
-    'no-console': 'warn',
 
+    'no-console': 'off',
     'consistent-return': 'off',
-
     'linebreak-style': 'off',
     'react/function-component-definition': 'off',
     'react/jsx-filename-extension': 'off',

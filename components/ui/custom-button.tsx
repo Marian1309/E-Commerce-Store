@@ -17,6 +17,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         type={type}
         ref={ref}
+        aria-label="button"
         {...props}
       >
         {children}

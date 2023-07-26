@@ -8,7 +8,7 @@ import { Container } from '@/components/ui';
 import MainNav from './main-nav';
 import NavbarActions from './navbar-actions';
 
-export const revalidate = 0;
+export const revalidate = 60;
 
 const Navbar = async () => {
   const categories = await getCategories();

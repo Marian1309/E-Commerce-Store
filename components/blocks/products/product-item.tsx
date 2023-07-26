@@ -1,6 +1,6 @@
 'use client';
 
-import type { FC, MouseEventHandler } from 'react';
+import { type FC, type MouseEventHandler } from 'react';
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -46,6 +46,8 @@ const ProductItem: FC<ProductItemProps> = ({ data }) => {
           src={data.images[0].url}
           alt={data.name}
           fill
+          quality={50}
+          sizes="100"
           className="aspect-square rounded-md object-cover"
         />
 
@@ -68,9 +70,7 @@ const ProductItem: FC<ProductItemProps> = ({ data }) => {
         <p className="text-sm text-gray-500">{data.category.name}</p>
       </div>
 
-      <div className="flex-between">
-        <Currency value={data.price} />
-      </div>
+      {data.price.length > 0 ? <Currency value={data.price} /> : 'Loading'}
     </div>
   );
 };

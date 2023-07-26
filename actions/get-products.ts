@@ -1,3 +1,5 @@
+import { cache } from 'react';
+
 import axios from 'axios';
 import queryString from 'query-string';
 
@@ -12,7 +14,7 @@ interface Query {
   isFeatured?: boolean;
 }
 
-const getProducts = async (query: Query): Promise<Product[]> => {
+const getProducts = cache(async (query: Query): Promise<Product[]> => {
   const { categoryId, colorId, sizeId, isFeatured } = query;
 
   const storeId = await getStoreId();
@@ -31,6 +33,6 @@ const getProducts = async (query: Query): Promise<Product[]> => {
   const { data } = await axios.get(url);
 
   return data;
-};
+});
 
 export default getProducts;
