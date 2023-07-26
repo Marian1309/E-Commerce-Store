@@ -16,9 +16,10 @@ interface FilterProps {
   data: (Size | Color)[];
   name: string;
   valueKey: string;
+  className?: string;
 }
 
-const Filter: FC<FilterProps> = ({ data, name, valueKey }) => {
+const Filter: FC<FilterProps> = ({ data, name, valueKey, className }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -49,7 +50,12 @@ const Filter: FC<FilterProps> = ({ data, name, valueKey }) => {
 
   return (
     <div className="mb-8">
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
+      <h3
+        className={cn(
+          'text-lg font-semibold text-gray-800 dark:text-white',
+          className
+        )}
+      >
         {name}
       </h3>
 

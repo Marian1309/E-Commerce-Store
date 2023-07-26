@@ -48,6 +48,7 @@ const ProductItem: FC<ProductItemProps> = ({ data }) => {
           fill
           quality={50}
           sizes="100"
+          priority
           className="aspect-square rounded-md object-cover"
         />
 
@@ -70,7 +71,7 @@ const ProductItem: FC<ProductItemProps> = ({ data }) => {
         <p className="text-sm text-gray-500">{data.category.name}</p>
       </div>
 
-      {data.price.length > 0 ? <Currency value={data.price} /> : 'Loading'}
+      <Currency value={data.price} />
     </div>
   );
 };

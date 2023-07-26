@@ -29,6 +29,7 @@ const CartItem: FC<CartItemProps> = ({ data }) => {
           src={data.images[0].url}
           alt=""
           className="object-cover object-center"
+          priority
         />
       </div>
 

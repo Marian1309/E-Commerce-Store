@@ -48,8 +48,18 @@ const MobileFilters: FC<MobileFiltersProps> = ({ sizes, colors }) => {
             </div>
 
             <div className="p-4">
-              <Filter valueKey="sizeId" name="Sizes" data={sizes} />
-              <Filter valueKey="colorId" name="Colors" data={colors} />
+              <Filter
+                valueKey="sizeId"
+                name="Sizes"
+                data={sizes}
+                className="dark:text-black"
+              />
+              <Filter
+                valueKey="colorId"
+                name="Colors"
+                data={colors}
+                className="dark:text-black"
+              />
             </div>
           </Dialog.Panel>
         </div>

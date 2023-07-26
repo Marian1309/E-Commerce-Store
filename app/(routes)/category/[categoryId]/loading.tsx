@@ -15,8 +15,8 @@ const Loading: FC = () => {
 
           <div className="mt-6 lg:col-span-4 lg:mt-0">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-              {[...Array(6)].map((item) => (
-                <Skeleton key={item} className="aspect-square rounded-xl" />
+              {[...Array(6)].map((_, index) => (
+                <Skeleton key={index} className="aspect-square rounded-xl" />
               ))}
             </div>
           </div>
