@@ -4,7 +4,7 @@ const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   darkMode: ['class'],
-  content: ['./{app,components}/**/*.tsx'],
+  content: ['./src/{app,components}/**/*.tsx'],
   theme: {
     container: {
       center: true,

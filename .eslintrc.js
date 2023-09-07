@@ -17,6 +17,8 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-empty-interface': 'warn',
     '@typescript-eslint/consistent-type-imports': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    'react/jsx-sort-props': 'warn',
 
     'no-console': 'off',
     'consistent-return': 'off',
