@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 
-import { Container, Skeleton } from '@/components/ui';
+import Container from '@/components/ui/container';
+import Skeleton from '@/components/ui/skeleton';
 
 const Loading: FC = () => {
   return (
