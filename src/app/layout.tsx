@@ -34,7 +34,7 @@ const RootLayout: FC<Props> = ({ children }) => {
           <ModalProvider />
 
           <Navbar />
-          {children}
+          <div className="min-h-[calc(100vh-115px)]">{children}</div>
           <Footer />
         </ThemeProvider>
       </body>
